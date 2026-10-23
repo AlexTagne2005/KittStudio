@@ -1,0 +1,6 @@
+{
+  "name": "KittStudio - Kit Marketing Produit AI",
+  "description": "Transformez une photo de produit en kit marketing complet : détourage studio, mockups professionnels, scènes lifestyle, formats réseaux sociaux, slogans et légendes multilingues avec export ZIP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
