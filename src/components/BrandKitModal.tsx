@@ -61,7 +61,8 @@ export const BrandKitModal: React.FC<BrandKitModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer"
+            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            aria-label="Fermer la modale"
           >
             ✕
           </button>
@@ -72,10 +73,11 @@ export const BrandKitModal: React.FC<BrandKitModalProps> = ({
           {/* Brand Name & Tagline */}
           <div className="grid sm:grid-cols-2 gap-3">
             <div>
-              <label className="text-xs font-bold text-slate-300 block mb-1.5">
+              <label htmlFor="brandName" className="text-xs font-bold text-slate-300 block mb-1.5">
                 {t.brandName}
               </label>
               <input
+                id="brandName"
                 type="text"
                 value={formData.brandName}
                 onChange={(e) => setFormData({ ...formData, brandName: e.target.value })}
@@ -83,10 +85,11 @@ export const BrandKitModal: React.FC<BrandKitModalProps> = ({
               />
             </div>
             <div>
-              <label className="text-xs font-bold text-slate-300 block mb-1.5">
+              <label htmlFor="tagline" className="text-xs font-bold text-slate-300 block mb-1.5">
                 {t.brandTagline}
               </label>
               <input
+                id="tagline"
                 type="text"
                 value={formData.tagline}
                 onChange={(e) => setFormData({ ...formData, tagline: e.target.value })}
@@ -140,9 +143,10 @@ export const BrandKitModal: React.FC<BrandKitModalProps> = ({
                   <div className="relative w-full h-11 rounded-xl overflow-hidden border border-white/20 shadow-sm flex items-center justify-center">
                     <input
                       type="color"
+                      aria-label={`Couleur ${label}`}
                       value={formData[key]}
                       onChange={(e) => setFormData({ ...formData, [key]: e.target.value })}
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
                     />
                     <div
                       className="w-full h-full"
@@ -164,16 +168,17 @@ export const BrandKitModal: React.FC<BrandKitModalProps> = ({
 
           {/* Target Audience */}
           <div>
-            <label className="text-xs font-bold text-slate-300 flex items-center gap-1.5 mb-1.5">
+            <label htmlFor="targetAudience" className="text-xs font-bold text-slate-300 flex items-center gap-1.5 mb-1.5">
               <Target className="w-3.5 h-3.5 text-emerald-400" />
               <span>{t.targetAudience}</span>
             </label>
             <textarea
+              id="targetAudience"
               rows={2}
               value={formData.targetAudience}
               onChange={(e) => setFormData({ ...formData, targetAudience: e.target.value })}
               placeholder="Ex: Passionnés de design, urbains 25-45 ans sensibles à l'authenticité"
-              className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-400"
+              className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-400 focus-visible:ring-1 focus-visible:ring-amber-400"
             />
           </div>
         </div>
