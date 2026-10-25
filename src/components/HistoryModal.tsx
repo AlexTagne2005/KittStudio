@@ -46,9 +46,10 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer"
+            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+            aria-label={language === 'fr' ? 'Fermer' : 'Close'}
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
 

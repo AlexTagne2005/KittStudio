@@ -429,9 +429,10 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               </div>
               <button
                 onClick={() => setPromptModalScene(null)}
-                className="text-slate-400 hover:text-white text-xs cursor-pointer"
+                className="text-slate-400 hover:text-white text-xs cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded"
+                aria-label={language === 'fr' ? 'Fermer' : 'Close'}
               >
-                ✕
+                <span aria-hidden="true">✕</span>
               </button>
             </div>
 
@@ -488,9 +489,10 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               <button
                 disabled={isExportingZip}
                 onClick={() => setExportModalOpen(false)}
-                className="text-slate-400 hover:text-white text-xs cursor-pointer"
+                className="text-slate-400 hover:text-white text-xs cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
+                aria-label={language === 'fr' ? 'Fermer' : 'Close'}
               >
-                ✕
+                <span aria-hidden="true">✕</span>
               </button>
             </div>
 
