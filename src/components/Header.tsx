@@ -61,7 +61,8 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Brand Kit button */}
           <button
             onClick={onOpenBrandKit}
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 text-xs font-medium transition cursor-pointer"
+            aria-label={t.brandKitTitle}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 text-xs font-medium transition cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
             title={t.brandKitTitle}
           >
             <Layers className="w-3.5 h-3.5 text-amber-400" />
@@ -71,7 +72,8 @@ export const Header: React.FC<HeaderProps> = ({
           {/* History button */}
           <button
             onClick={onOpenHistory}
-            className="relative flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 text-xs font-medium transition cursor-pointer"
+            aria-label={t.historyTitle}
+            className="relative flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 text-xs font-medium transition cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
             title={t.historyTitle}
           >
             <History className="w-3.5 h-3.5 text-indigo-400" />
@@ -85,7 +87,8 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center bg-slate-900 rounded-lg p-0.5 border border-slate-800">
             <button
               onClick={() => onLanguageChange('fr')}
-              className={`px-2 py-1 rounded-md text-xs font-bold transition cursor-pointer ${
+              aria-pressed={language === 'fr'}
+              className={`px-2 py-1 rounded-md text-xs font-bold transition cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none ${
                 language === 'fr'
                   ? 'bg-amber-500 text-slate-950 shadow-sm'
                   : 'text-slate-400 hover:text-slate-200'
@@ -95,7 +98,8 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <button
               onClick={() => onLanguageChange('en')}
-              className={`px-2 py-1 rounded-md text-xs font-bold transition cursor-pointer ${
+              aria-pressed={language === 'en'}
+              className={`px-2 py-1 rounded-md text-xs font-bold transition cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none ${
                 language === 'en'
                   ? 'bg-amber-500 text-slate-950 shadow-sm'
                   : 'text-slate-400 hover:text-slate-200'
