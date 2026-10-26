@@ -61,7 +61,8 @@ export const BrandKitModal: React.FC<BrandKitModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer"
+            aria-label={t.brandName === 'Nom de la marque' ? 'Fermer' : 'Close'}
+            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
           >
             ✕
           </button>

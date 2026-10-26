@@ -46,7 +46,8 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer"
+            aria-label={t.openProject === 'Ouvrir' ? 'Fermer' : 'Close'}
+            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
           >
             ✕
           </button>
@@ -112,14 +113,16 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
                       onLoadProject(proj);
                       onClose();
                     }}
-                    className="p-2 rounded-lg bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-slate-300 text-xs font-semibold flex items-center gap-1 transition cursor-pointer"
+                    aria-label={t.openProject}
+                    className="p-2 rounded-lg bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-slate-300 text-xs font-semibold flex items-center gap-1 transition cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
                     title={t.openProject}
                   >
                     <FolderOpen className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => onDeleteProject(proj.id)}
-                    className="p-2 rounded-lg bg-slate-900 hover:bg-rose-500/20 text-slate-500 hover:text-rose-400 transition cursor-pointer"
+                    aria-label={t.deleteProject}
+                    className="p-2 rounded-lg bg-slate-900 hover:bg-rose-500/20 text-slate-500 hover:text-rose-400 transition cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
                     title={t.deleteProject}
                   >
                     <Trash2 className="w-4 h-4" />
