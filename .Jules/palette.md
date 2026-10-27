@@ -1,0 +1,3 @@
+## 2024-03-20 - Responsive Hidden Text Accessibility
+**Learning:** Responsive utility classes like `hidden md:inline` on button text can create critical accessibility issues on mobile devices where the buttons become icon-only without proper ARIA labels. Additionally, these custom-styled buttons often lack explicit keyboard focus states by default.
+**Action:** When using responsive classes to hide text on small screens, always add explicit `aria-label` attributes to ensure screen reader context is maintained across all device sizes. Always pair custom styling with `focus-visible:ring` utilities to preserve keyboard navigation.
