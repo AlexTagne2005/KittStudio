@@ -14,6 +14,7 @@ export const translations = {
     uploadSubtitle: 'Prenez une photo sur votre smartphone ou importez une image existante.',
     dragDropText: 'Glissez votre image ici, ou cliquez pour parcourir',
     capturePhoto: 'Prendre une photo',
+    browseGallery: 'Galerie',
     orUseSample: 'Ou essayez instantanément avec un produit démo :',
     analyzingProduct: 'Analyse IA du produit en cours...',
     
@@ -105,6 +106,7 @@ export const translations = {
     uploadSubtitle: 'Snap a photo with your mobile or pick an existing image file.',
     dragDropText: 'Drop your product photo here, or click to browse',
     capturePhoto: 'Take a photo',
+    browseGallery: 'Gallery',
     orUseSample: 'Or try instantly with a demo product:',
     analyzingProduct: 'AI is analyzing your product...',
     
