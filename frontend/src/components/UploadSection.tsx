@@ -202,7 +202,7 @@ export const UploadSection: React.FC<UploadSectionProps> = ({
             <button
               onClick={() => cameraInputRef.current?.click()}
               type="button"
-              className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer"
+              className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50"
             >
               <Camera className="w-4 h-4 text-amber-400" />
               <span>{t.capturePhoto}</span>
@@ -210,7 +210,8 @@ export const UploadSection: React.FC<UploadSectionProps> = ({
             <button
               onClick={() => fileInputRef.current?.click()}
               type="button"
-              className="py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer"
+              aria-label="Galerie"
+              className="py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50"
             >
               <ImageIcon className="w-4 h-4 text-indigo-400" />
               <span className="hidden sm:inline">Galerie</span>
