@@ -5,7 +5,7 @@ Ce plan détaille la feuille de route technique pour le passage du Proof-of-Conc
 ## Phase 1 : Fondations et Architecture Backend (Semaines 1-2)
 **Objectif :** Mettre en place l'infrastructure de base, la base de données et l'API sécurisée.
 
-*   **Sprint 1.1 : Modélisation et Infrastructure (S1)**
+*   **[Terminé] Sprint 1.1 : Modélisation et Infrastructure (S1)**
     *   Installation et configuration du cluster PostgreSQL 18.
     *   Design du schéma relationnel complet (Diagramme ERD) : Utilisateurs, Workspaces, Projets, Scènes, Transactions (Crédits).
     *   Initialisation du projet FastAPI (Structure des dossiers, gestion des configurations via `.env`).
