@@ -46,7 +46,8 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer"
+            aria-label={language === 'fr' ? 'Fermer' : 'Close'}
+            className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50"
           >
             ✕
           </button>
@@ -112,15 +113,17 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
                       onLoadProject(proj);
                       onClose();
                     }}
-                    className="p-2 rounded-lg bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-slate-300 text-xs font-semibold flex items-center gap-1 transition cursor-pointer"
+                    className="p-2 rounded-lg bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-slate-300 text-xs font-semibold flex items-center gap-1 transition cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50"
                     title={t.openProject}
+                    aria-label={t.openProject}
                   >
                     <FolderOpen className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => onDeleteProject(proj.id)}
-                    className="p-2 rounded-lg bg-slate-900 hover:bg-rose-500/20 text-slate-500 hover:text-rose-400 transition cursor-pointer"
+                    className="p-2 rounded-lg bg-slate-900 hover:bg-rose-500/20 text-slate-500 hover:text-rose-400 transition cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/50"
                     title={t.deleteProject}
+                    aria-label={t.deleteProject}
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
@@ -144,9 +147,9 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
           </button>
           <button
             onClick={onClose}
-            className="py-2 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold cursor-pointer"
+            className="py-2 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50"
           >
-            Fermer
+            {language === 'fr' ? 'Fermer' : 'Close'}
           </button>
         </div>
       </div>
